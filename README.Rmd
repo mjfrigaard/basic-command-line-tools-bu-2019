@@ -160,7 +160,7 @@ Here is a quick list of commonly used Terminal commands.
 
 ***
 
-## Command line skill # 1: what kind of shell are we using?
+## 1: what kind of shell are we using?
 
 We can check by inspecting the `$SHELL` variable.
 
@@ -171,7 +171,7 @@ $ echo $SHELL
 
 We're using the `bash` shell in RStudio.Cloud.
 
-## Command line skill # 2: who are we signed in as?
+## 2: who are we signed in as?
 
 Check the login with `whoami`?
 
@@ -183,7 +183,7 @@ rstudio-user
 We are signed is as `rstudio-user`. This is important if we are wondering about privileges. 
 
 
-## Command line skill # 3: where are we?
+## 3: where are we?
 
 ```sh
 $ pwd
@@ -193,7 +193,7 @@ cloud/project
 This tells us we're in the `cloud/project` folder. We can also see this in the files pane. 
 
 
-## Command line skill # 4: creating new folders
+## 4: creating new folders
 
 We will create a new folder, `data`, using `mkdir`. You won't see anything happen when you enter this command. 
 
@@ -203,7 +203,7 @@ $ mkdir data
 
 ![](figs/Oct-16-2019-03-43-31-new-data.gif)
 
-## Command line skill # 5: creating files
+## 5: creating files
 
 Now we'll create a `README.md` file to document everything in this new project. `README`'s are an important part of data work, you can read more about what goes in them here. You won't see anything after entering these commands.
 
@@ -214,7 +214,7 @@ $ touch README.md
 ![](figs/Oct-16-2019-03-43-31-new-README.gif)
 
 
-## Command line skill # 6: editing files
+## 6: editing files
 
 Next we will be editing the `README` file. We want to add a title (read more about the markdown (`md`) syntax [here](https://www.markdownguide.org/basic-syntax/)). We will be doing this with the echo command and the greater than sign (`>`). This tells `bash` to add whatever text comes after `echo` belongs in the file after the greater than sign. It looks like this:
 
@@ -224,7 +224,7 @@ $ echo "# My Frankenstien" > README.md
 
 Again, we'll see no evidence of what we've done in the terminal, so we will check the file to see if it worked. 
 
-## Command line skill # 6: editing files (oops!)
+## 6: editing files (oops!)
 
 OOPS! We have a typo. We can fix it by entering the same commands (with correct spelling).
 
@@ -235,13 +235,13 @@ $ echo "# My Frankenstein" > README.md
 $ echo $SHELL
 ```
 
-## Command line skill # 6: editing files (part 1)
+## 6: editing files (part 1)
 
 OOPS! We have a typo. We can fix it by entering the same commands (with correct spelling).
 
 ![](figs/Oct-16-2019-03-43-31-edit-README.gif)
 
-## Command line skill # 6: editing files (part 2)
+## 6: editing files (part 2)
 
 ```sh
 $ echo "or, The Modern Prometheus - M. Shelley" >> README.md
@@ -249,7 +249,7 @@ $ echo "or, The Modern Prometheus - M. Shelley" >> README.md
 
 ![](figs/Oct-16-2019-03-43-31-add-text-README.gif)
 
-## Command line skill # 7: moving around
+## 7: moving around
 
 Move around with the `cd` command.
 
@@ -262,7 +262,7 @@ $ pwd
 Let's move into the `data` folder. We can do this with `cd` and the name of the destination folder.
 
 
-## Command line skill # 8: downloading files
+## 8: downloading files
 
 Let's download some files from the web! There are endless free plain text books available here at [Project Gutenberg](https://www.gutenberg.org/). We'll start by downloading Mary Wollstonecraft (Godwin) Shelley's Frankenstein using this url: https://www.gutenberg.org/files/84/84-0.txt. 
 
@@ -285,7 +285,7 @@ $ frank.txt
 
 But are these the data we wanted? 
 
-## Command line skill # 9: previewing file contents
+## 9: previewing file contents
 
 ```sh
 $ head -n 10 frank.txt
@@ -306,7 +306,7 @@ $ curl "https://raw.githubusercontent.com/chadwickbureau/baseballdatabank/master
 
 Let's check the `.csv` version using `head`
 
-## Command line skill # 9: previewing file contents (part 2)
+## 9: previewing file contents (part 2)
 
 ```sh
 $ head -n 10 people-bb.csv 
@@ -324,7 +324,7 @@ Now we can see both the top and bottom of the data file.
 
 ![](figs/07-head-tail-lahman.png)
 
-## Command line skill # 9: previewing file contents (part 3)
+## 9: previewing file contents (part 3)
 
 What if we want to scroll through a data file? We can do this with the `less` command. 
 
@@ -335,7 +335,7 @@ $ less frank.txt
 ![](figs/Oct-16-2019-06-46-29-less.gif)
 
 
-## Command line skill # 10: putting it all together to document your work
+## 10: putting it all together to document your work
 
 Finally, we'll get some summary information about these two files we've downloaded.
 
@@ -350,7 +350,7 @@ $ # add date data were downloaded
 $ echo "downloaded on" $(date) >> data-dictionary.md
 ```
 
-## Command line skill # 10: putting it all together to document your work
+## 10: putting it all together to document your work
 
 The `.csv` file is well formatted, so we can use `wc` to line count. But there are a lot of blank lines in the Frankenstein novel, so we have to use the `grep` command here. The `-c` is the count option, and `"[^ \\n\\t]"` tells the command to look for new/blank lines.
 
