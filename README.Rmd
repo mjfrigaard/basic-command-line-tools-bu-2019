@@ -76,7 +76,7 @@ link to slides: http://bit.ly/bu-beyond-spreadsheets
 
 ![](figs/02-shell.png)
 
-If you are on a Windows machine, you can install bash by following this guide. If you're on macOS Catalina, you'll be using the `zsh` shell in Terminal. Both of these are similar, but for today's workshop, we will be using the command line in the [RStudio.Cloud](https://rstudio.cloud/) interface. 
+If you are on a Windows machine, you can install bash by following [this guide](https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview). If you're on macOS Catalina, you'll be using the `zsh` shell in Terminal. Both of these are similar, but for today's workshop, we will be using the command line in the [RStudio.Cloud](https://rstudio.cloud/) interface. 
 
 ## Dealing with data from the command line
 
@@ -90,7 +90,7 @@ Command lines are everywhere, so being able to use them is helpful. This basic d
 
 It might seem clunky and ancient, but people keep this technology around because of it's 1) **specificity** and 2) **modularity**. 
 
-[Specificity](https://www.dictionary.com/browse/specific) means each Unix command or tool does one thing very well (or [DOTADIW](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)
+[Specificity](https://www.dictionary.com/browse/specific) means each Unix command or tool does one thing very well (or [DOTADIW](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well))
 
 [Modularity](https://en.wikipedia.org/wiki/Modularity#Table_1:_The_use_of_modularity_by_discipline%5B34%5D) is the ability to mix and match these tools together with 'pipes,' a kind of grammatical glue that allows users to expand these tools in seemingly endless combinations
 
